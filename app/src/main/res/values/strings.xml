@@ -8,4 +8,11 @@
     <string name="ok">OK</string>
     <string name="barcode_error_format">error format</string>
     <string name="success">Nice!</string>
+
+<!--    Registration text part-->
+    <string name="hint_number">Мобильный телефона</string>
+    <string name="hint_doc">ИИН</string>
+    <string name="hint_surname">Фамилия</string>
+    <string name="hint_name">Имя</string>
+    <string name="next">Далее</string>
 </resources>
