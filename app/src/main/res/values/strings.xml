@@ -9,7 +9,7 @@
     <string name="barcode_error_format">error format</string>
     <string name="success">Nice!</string>
 
-    <!--    Registration text part-->
+<!--    Registration text part-->
     <string name="hint_number">Мобильный телефона</string>
     <string name="hint_doc">ИИН</string>
     <string name="hint_surname">Фамилия</string>
@@ -20,4 +20,6 @@
     <string name="signin">Войти</string>
     <string name="signup">Регистрация</string>
     <string name="not_have_acc_label">Если у вас нет аккаунта</string>
+<!--    Main page-->
+    <string name="balance">Баланс вознограждения :</string>
 </resources>
