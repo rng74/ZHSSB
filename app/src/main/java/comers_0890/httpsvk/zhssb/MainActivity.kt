@@ -24,9 +24,8 @@ import com.takusemba.spotlight.shape.Circle
 import com.takusemba.spotlight.target.SimpleTarget
 import comers_0890.httpsvk.zhssb.qr.BarcodeCaptureActivity
 import comers_0890.httpsvk.zhssb.ui.main.MainFragment
+import comers_0890.httpsvk.zhssb.ui.scan.ScanActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.math.BigDecimal
-import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,8 +57,8 @@ class MainActivity : AppCompatActivity() {
             })
 
         start_qr.setOnClickListener {
-            val intent = Intent(applicationContext, BarcodeCaptureActivity::class.java)
-            startActivityForResult(intent, BARCODE_READER_REQUEST_CODE)
+            val intent = Intent(applicationContext, ScanActivity::class.java)
+            startActivity(intent)
         }
 
         FirebaseMessaging.getInstance().isAutoInitEnabled = true
