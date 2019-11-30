@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#CF79F6</color>
+
+    <color name="gradientStart">#CF79F6</color>
+    <color name="gradientCenter">#A66DF5</color>
+    <color name="gradientEnd">#7F61F5</color>
+
+    <color name="textColor">#4548AA</color>
+    <color name="subTitleColor">#7F61F5</color>
+    <color name="grayTransparent">#33FFFFFF</color>
+    <color name="black_light">#979797</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="calendar_color">#CF79F6</color>
+    <color name="red">#E35663</color>
+    <color name="hint_color">#95A4DE</color>
+
+
+</resources>

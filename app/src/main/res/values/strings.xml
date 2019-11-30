@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">zhssb</string>
+    <string name="str">str %s</string>
+    <string name="msg_subscribed">Message subscribed</string>
+    <string name="msg_subscribe_failed">Message subscribe failed</string>
+    <string name="low_storage_error">error</string>
+    <string name="no_camera_permission">No camera permission</string>
+    <string name="ok">OK</string>
+    <string name="barcode_error_format">error format</string>
+    <string name="success">Nice!</string>
+</resources>
