@@ -1,16 +1,16 @@
 package comers_0890.httpsvk.zhssb
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
-import com.github.mikephil.charting.data.BarData
-import com.github.mikephil.charting.data.BarDataSet
-import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.tasks.OnCompleteListener
@@ -64,29 +64,46 @@ class MainActivity : AppCompatActivity() {
 
         FirebaseMessaging.getInstance().isAutoInitEnabled = true
 
-//        bar_chart.setFitBars(true)
-//        bar_chart.setPadding(20, 20, 20, 20)
-//        bar_chart.legend.isEnabled = false
-//        bar_chart.description.isEnabled = false
-//        bar_chart.axisRight.isEnabled = false
-//
-//
-//        val entry = mutableListOf<BarEntry>()
-//
-//        val barDataSet = BarDataSet(entry, "")
-//        val barData = BarData(barDataSet)
-//        barDataSet.color = R.color.red
-//        barDataSet.valueFormatter = object : ValueFormatter() {
-//            override fun getFormattedValue(value: Float): String? {
-//                return value.toString()
-//            }
-//        }
-//        barDataSet.valueTextSize = 12f
-//        bar_chart.data = barData
-//        bar_chart.invalidate()
+        prepareGraph()
 
         initView()
-        spotLight()
+//        spotLight()
+    }
+
+    private fun prepareGraph() {
+        val entry = mutableListOf<PieEntry>()
+        entry.add(PieEntry(13.0f, "Заплатил"))
+        entry.add(PieEntry(87.0f, "Остаток"))
+
+        val pieDataSet = PieDataSet(entry, "")
+
+        pieDataSet.valueTextSize = 12f
+
+        this.let { context ->
+            pieDataSet.colors = getColors(context)
+            pieDataSet.valueTextColor = ContextCompat.getColor(context, android.R.color.white)
+        }
+
+        vp_pie_chart.data = PieData(pieDataSet)
+
+        //TODO : Add description
+
+    }
+
+    private fun getColors(context: Context): MutableList<Int> {
+        return mutableListOf(
+            ContextCompat.getColor(context, android.R.color.holo_blue_bright),
+            ContextCompat.getColor(context, android.R.color.darker_gray),
+            ContextCompat.getColor(context, android.R.color.holo_orange_light),
+            ContextCompat.getColor(context, android.R.color.holo_orange_dark),
+            ContextCompat.getColor(context, android.R.color.holo_red_dark),
+            ContextCompat.getColor(context, android.R.color.holo_red_light),
+            ContextCompat.getColor(context, android.R.color.holo_purple),
+            ContextCompat.getColor(context, android.R.color.holo_blue_dark),
+            ContextCompat.getColor(context, android.R.color.holo_green_light),
+            ContextCompat.getColor(context, android.R.color.holo_green_dark),
+            ContextCompat.getColor(context, android.R.color.holo_blue_light)
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
