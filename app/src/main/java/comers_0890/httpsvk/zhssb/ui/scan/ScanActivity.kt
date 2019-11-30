@@ -3,7 +3,6 @@ package comers_0890.httpsvk.zhssb.ui.scan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputFilter
 import comers_0890.httpsvk.zhssb.R
 import comers_0890.httpsvk.zhssb.qr.BarcodeCaptureActivity
 import kotlinx.android.synthetic.main.activity_scan.*
