@@ -21,8 +21,14 @@ class MainFragment : Fragment() {
 
         initViewModel()
 
+        observeViewModel()
+
     }
     private fun initViewModel() {
+
+    }
+
+    private fun observeViewModel() {
 
     }
 }
