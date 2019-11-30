@@ -16,25 +16,21 @@
             android:src="@drawable/ic_add"
             android:layout_height="wrap_content"/>
 
+
     <androidx.cardview.widget.CardView
-            android:layout_margin="8dp"
+            android:id="@+id/vp_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
 
-        <TextView
-                android:text="График доходов:"
-                android:textSize="26sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <!--<com.github.mikephil.charting.charts.BarChart-->
-        <!--android:id="@+id/bar_chart"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_margin="8dp"-->
-        <!--android:layoutAnimation="@anim/layout_animation_fall_down"-->
-        <!--android:minHeight="300dp"/>-->
-
+        <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/vp_pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:minHeight="470dp"/>
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
