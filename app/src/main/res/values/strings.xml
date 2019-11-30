@@ -15,4 +15,6 @@
     <string name="hint_surname">Фамилия</string>
     <string name="hint_name">Имя</string>
     <string name="next">Далее</string>
+<!--    Main page-->
+    <string name="balance">Баланс вознограждения :</string>
 </resources>

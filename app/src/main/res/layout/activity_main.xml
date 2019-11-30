@@ -1,36 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/start_qr"
-            android:layout_width="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_add"
-            android:layout_height="wrap_content"/>
-
-
-    <androidx.cardview.widget.CardView
-            android:id="@+id/vp_content"
+        android:layout_height="match_parent">
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            tools:context=".MainActivity">
+            <LinearLayout
+                    android:id="@+id/balance_card"
+                    android:orientation="vertical"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/balance_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/balance_title"
+                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="24dp"
+                        android:text="@string/balance"/>
+                    <TextView
+                            android:id="@+id/balance_count"
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="8dp"
+                            android:textSize="24dp"
+                            android:text="100000"/>
+            </LinearLayout>
 
-        <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/vp_pie_chart"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/start_qr"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_add"
+                android:layout_height="wrap_content"/>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/vp_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/balance_card"
+                android:nestedScrollingEnabled="false"
                 android:layout_margin="16dp"
-                android:layoutAnimation="@anim/layout_animation_fall_down"
-                android:minHeight="470dp"/>
-    </androidx.cardview.widget.CardView>
+                app:cardCornerRadius="8dp">
 
-</RelativeLayout>
+            <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/vp_pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    android:minHeight="470dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/qr_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp">
+            <ImageView
+                    android:id="@+id/qr_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/promo_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qr_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="32dp"
+                    android:textStyle="bold"
+                    android:text="8ff3jxwW"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
