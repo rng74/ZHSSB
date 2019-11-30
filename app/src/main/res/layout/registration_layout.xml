@@ -5,10 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
-            android:orientation="vertical"
-            android:padding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/surname"
                 android:layout_width="match_parent"
@@ -20,15 +20,15 @@
                     android:id="@+id/surname_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:layout_margin="8dp"
                     android:hint="@string/hint_surname"
-                    android:textColorHighlight="@color/colorPrimary"
-                    android:textColorHint="@color/colorPrimary"
-                    android:shadowColor="@color/colorPrimary"
                     android:imeOptions="actionDone"
                     android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+                    android:paddingTop="8dp"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -42,15 +42,15 @@
                     android:id="@+id/name_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:layout_margin="8dp"
                     android:hint="@string/hint_name"
-                    android:textColorHighlight="@color/colorPrimary"
-                    android:textColorHint="@color/colorPrimary"
-                    android:shadowColor="@color/colorPrimary"
                     android:imeOptions="actionDone"
                     android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+                    android:paddingTop="8dp"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,15 +64,15 @@
                     android:id="@+id/doc_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:layout_margin="8dp"
                     android:hint="@string/hint_doc"
-                    android:textColorHighlight="@color/colorPrimary"
-                    android:textColorHint="@color/colorPrimary"
-                    android:shadowColor="@color/colorPrimary"
                     android:imeOptions="actionDone"
                     android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+                    android:paddingTop="8dp"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -86,27 +86,27 @@
                     android:id="@+id/number_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:layout_margin="8dp"
                     android:hint="@string/hint_number"
-                    android:textColorHighlight="@color/colorPrimary"
-                    android:textColorHint="@color/colorPrimary"
-                    android:shadowColor="@color/colorPrimary"
                     android:imeOptions="actionDone"
                     android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+                    android:paddingTop="8dp"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/next"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/botton_corner"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginBottom="32dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_alignParentBottom="true"
-                android:text="@string/next"/>
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/botton_corner"
+            android:text="@string/next"
+            android:textColor="@color/white"/>
 </RelativeLayout>

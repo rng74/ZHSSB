@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
             })
 
         start_qr.setOnClickListener {
-            val intent = Intent(applicationContext, RegistrationActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(applicationContext, RegistrationActivity::class.java)
+//            startActivity(intent)
         }
 
         FirebaseMessaging.getInstance().isAutoInitEnabled = true

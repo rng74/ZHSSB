@@ -15,6 +15,11 @@
     <string name="hint_surname">Фамилия</string>
     <string name="hint_name">Имя</string>
     <string name="next">Далее</string>
+    <string name="hint_login">Логин</string>
+    <string name="hint_password">Пароль</string>
+    <string name="signin">Войти</string>
+    <string name="signup">Регистрация</string>
+    <string name="not_have_acc_label">Если у вас нет аккаунта</string>
 <!--    Main page-->
     <string name="balance">Баланс вознограждения :</string>
 </resources>
