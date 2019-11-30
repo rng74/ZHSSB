@@ -24,6 +24,7 @@ import com.takusemba.spotlight.shape.Circle
 import com.takusemba.spotlight.target.SimpleTarget
 import comers_0890.httpsvk.zhssb.qr.BarcodeCaptureActivity
 import comers_0890.httpsvk.zhssb.ui.main.MainFragment
+import comers_0890.httpsvk.zhssb.ui.registration.RegistrationActivity
 import comers_0890.httpsvk.zhssb.ui.scan.ScanActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             })
 
         start_qr.setOnClickListener {
-            val intent = Intent(applicationContext, ScanActivity::class.java)
+            val intent = Intent(applicationContext, RegistrationActivity::class.java)
             startActivity(intent)
         }
 
