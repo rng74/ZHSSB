@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
                 password.error = "Заполните все поля"
             }
             if (!login_text.text!!.isEmpty() && !password_text.text!!.isEmpty()) {
-                // TODO : Implement logging in
                 val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
             }
