@@ -17,9 +17,15 @@ import com.google.android.gms.vision.barcode.Barcode
 import comers_0890.httpsvk.zhssb.MainActivity
 import comers_0890.httpsvk.zhssb.R
 import comers_0890.httpsvk.zhssb.qr.BarcodeCaptureActivity
+import comers_0890.httpsvk.zhssb.ui.main.MainViewModel
 import kotlinx.android.synthetic.main.activity_scan.*
+import org.koin.android.ext.android.inject
+import org.koin.android.viewmodel.ext.android.viewModel
+import java.util.prefs.Preferences
 
 class ScanActivity : AppCompatActivity() {
+    val preferences: Preferences by inject()
+    private val viewModel: ScanViewModelclass by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,6 +91,8 @@ class ScanActivity : AppCompatActivity() {
         } else
             super.onActivityResult(requestCode, resultCode, data)
     }
+
+
 
 
     companion object {
